@@ -6,62 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Malik Felix | Landing Page</title>
   <link rel="stylesheet" href="CSS/style.css">
+  <script src="https://kit.fontawesome.com/720b288d78.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="landing-title">
-      <h1>Landing Page</h1>
-    </div>
-    <nav class="main-nav">
-      <ul class="nav-items">
-        <li class="nav-item">Home</li>
-        <li class="nav-item">About</li>
-        <li class="nav-item">Services</li>
-        <li class="nav-item">Contact</li>
-      </ul>
-    </nav>
-  </header>
-  <section class="about">
-    <h1 class="about-title">About</h1>
-    <p class="about-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt excepturi
-      explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur ducimus,
-      quam sint fuga ipsa minus? Architecto quod aperiam at maiores a sunt quia, modi, temporibus illum quas aut culpa
-      cumque tempore deleniti est, pariatur eius quis atque laudantium corrupti odit. Nostrum commodi beatae natus
-      eligendi asperiores itaque exercitationem illo dolores. Aliquid doloribus pariatur sit a! Maxime beatae omnis
-      adipisci! Omnis ipsa eum repudiandae impedit placeat excepturi possimus voluptas ad unde quas officiis quibusdam
-      harum cum ratione quasi, obcaecati iste quidem saepe?</p>
-  </section>
-  <section class="services">
-    <h1 class="services-title">About</h1>
-    <p class="services-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt excepturi
-      explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur ducimus,
-      quam sint fuga ipsa minus? Architecto quod aperiam at maiores a sunt quia, modi, temporibus illum quas aut culpa
-      cumque tempore deleniti est, pariatur eius quis atque laudantium corrupti odit. Nostrum commodi beatae natus
-      eligendi asperiores itaque exercitationem illo dolores. Aliquid doloribus pariatur sit a! Maxime beatae omnis
-      adipisci! Omnis ipsa eum repudiandae impedit placeat excepturi possimus voluptas ad unde quas officiis quibusdam
-      harum cum ratione quasi, obcaecati iste quidem saepe?</p>
-  </section>
-  <section class="contact">
-    <h1 class="contact-title">Contact Us</h1>
-    <div class="contact-content">
-      <p class="contact-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, temporibus?
-        Corporis, fugiat. Ad nesciunt alias tempora iusto ea vel. Praesentium vitae itaque consectetur libero saepe.</p>
-      <form method="post" action="#">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="fullname" placeholder="Your full name...">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email...">
-        <label for="message">Message</label>
-        <input type="textarea" id="message" name="message" placeholder="Enter your message here...">
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-  </section>
-  <footer class="footer">
-    <p class="footer-copyright">&copy; 2020 Malik Felix All Rights Reserved</p>
-  </footer>
-  <script src="app.js"></script>
+  <div class="container">
+    <header class="main-header">
+      <div class="landing-title">
+        <h1>Landing Page</h1>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-items">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="about">
+      <div class="about-image">
+        <i class="fas fa-laptop-code"></i>
+      </div>
+      <div class="about-content">
+        <h1 class="about-title">About</h1>
+        <p class="about-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt
+          excepturi
+          explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur
+          ducimus,
+          quam sint fuga ipsa minus? Architecto quod aperiam at maiores a sunt quia, modi, temporibus illum quas aut
+          culpa
+          cumque tempore deleniti est, pariatur eius quis atque laudantium corrupti odit. Nostrum commodi beatae natus
+          eligendi asperiores itaque exercitationem illo dolores. Aliquid doloribus pariatur sit a! Maxime beatae omnis
+          adipisci! Omnis ipsa eum repudiandae impedit placeat excepturi possimus voluptas ad unde quas officiis
+          quibusdam
+          harum cum ratione quasi, obcaecati iste quidem saepe?</p>
+      </div>
+    </section>
+    <section class="services">
+      <div class="services-content">
+        <h1 class="services-title">Services</h1>
+        <p class="services-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt
+          excepturi
+          explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur
+          ducimus,
+          quam sint fuga ipsa minus? Architecto quod aperiam at maiores a sunt quia, modi, temporibus illum quas aut
+          culpa
+          cumque tempore deleniti est, pariatur eius quis atque laudantium corrupti odit. Nostrum commodi beatae natus
+          eligendi asperiores itaque exercitationem illo dolores. Aliquid doloribus pariatur sit a! Maxime beatae omnis
+          adipisci! Omnis ipsa eum repudiandae impedit placeat excepturi possimus voluptas ad unde quas officiis
+          quibusdam
+          harum cum ratione quasi, obcaecati iste quidem saepe?</p>
+      </div>
+      <div class="services-image">
+        <i class="fas fa-briefcase"></i>
+      </div>
+
+    </section>
+    <section class="contact">
+      <h1 class="contact-title">Contact Us</h1>
+      <div class="contact-content">
+        <p class="contact-blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, temporibus?
+          Corporis, fugiat. Ad nesciunt alias tempora iusto ea vel. Praesentium vitae itaque consectetur libero saepe.
+        </p>
+        <form class="contact-form" method="post" action="#">
+          <div class="contact-info">
+            <div class="contact-name">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="fullname" placeholder="Your full name...">
+            </div>
+            <div class="contact-email">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email...">
+            </div>
+          </div>
+          <div class="contact-message">
+            <label for="message">Message</label>
+            <input type="textarea" id="message" name="message" placeholder="Enter your message here...">
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer-copyright">&copy; 2020 Malik Felix All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script src="js/app.js"></script>
 </body>
 
 </html>

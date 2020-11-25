@@ -1,0 +1,144 @@
+/****************
+CSS Reset
+*****************/
+*,
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/****************
+Container Styles
+*****************/
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/****************
+Header
+*****************/
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3em;
+}
+
+.landing-title {
+  width: 50%;
+}
+
+.main-nav {
+  width: 50%;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+/****************
+Icon Styles
+*****************/
+
+.fas {
+  font-size: 20em;
+}
+
+/****************
+About
+*****************/
+
+.about {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6em;
+}
+
+.about-image {
+  width: 50%;
+}
+
+.about-content {
+  width: 50%;
+}
+
+/****************
+Services
+*****************/
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 6em;
+}
+
+.services-content {
+  width: 50%;
+}
+
+.services-image {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+/****************
+Contact
+*****************/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  margin: 3em 10em 3em 10em;
+}
+
+.contact-form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 2em;
+}
+
+.contact-info {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  line-height: 2;
+}
+
+.contact-name,
+.contact-email {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 5px;
+}
+
+.contact-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+}
+
+input[type=text],
+input[type=email],
+input[type=textarea] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 1em 0 1em 0;
+}
+
+input[type=submit] {
+  margin: 5px;
+}
+
+
+
