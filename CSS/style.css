@@ -11,6 +11,15 @@ CSS Reset
   text-decoration: none;
 }
 
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /****************
 Container Styles
 *****************/
@@ -26,8 +35,14 @@ Header
 
 .main-header {
   display: flex;
-  justify-content: space-between;
-  margin: 3em;
+  justify-content: space-evenly;
+  padding: 2em;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid black;
+  background: white;
+  animation: 1s slidefade 0.25s forwards;
+  opacity: 0;
 }
 
 .landing-title {
@@ -42,12 +57,60 @@ Header
   justify-content: space-between;
 }
 
+.close {
+  /* display: none; */
+  animation: 0.2s slidefade-out 0.2s forwards;
+  opacity: 1;
+}
+
+.no-animation {
+  opacity: 1;
+  animation: none;
+}
+
+/****************
+Landing
+*****************/
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-landing {
+  line-height: 1.5;
+}
+
+.main-landing-title {
+  text-decoration: underline;
+  font-size: 6rem;
+}
+
+.main-landing-subtitle {
+  font-size: 2rem;
+}
+
 /****************
 Icon Styles
 *****************/
 
 .fas {
   font-size: 20em;
+}
+
+.fa-arrow-up {
+  font-size: 3em;
+}
+
+.scroll-to-top {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin: 2em; */
 }
 
 /****************
@@ -57,7 +120,7 @@ About
 .about {
   display: flex;
   justify-content: space-evenly;
-  margin: 6em;
+  margin: 9em 6em 6em 6em;
 }
 
 .about-image {
@@ -92,11 +155,19 @@ Services
 Contact
 *****************/
 
-.contact {
+#contact {
+  scroll-margin-top: 15em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.main-contact {
   display: flex;
+  align-self: center;
   flex-direction: column;
-  margin: 3em 10em 3em 10em;
-  padding: 3em;
+  max-width: 1024px;
+  margin: 3em 15em 0em 15em;
+  padding: 6em;
   border: 1px solid rgba(204, 204, 204, 0.2);
   border-radius: 10px;
   box-shadow: 5px 10px 18px rgba(204, 204, 204, 0.4);
@@ -151,4 +222,62 @@ label {
   margin-top: 1em;
 }
 
+/****************
+Footer
+*****************/
+.footer {
+  display: flex;
+  width: 100%;
+  margin: 3em;
+  align-items: center;
+  justify-content: center;
+}
 
+/****************
+Grouped Styles
+*****************/
+
+#home,
+#about,
+#services {
+  scroll-margin-top: 20em;
+}
+
+.landing,
+.about,
+.services,
+.contact {
+  height: 100vh;
+  justify-content: center;
+}
+
+.about-blurb,
+.services-blurb,
+.contact-blurb {
+  line-height: 2;
+}
+
+.about-title,
+.services-title,
+.contact-title {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+/****************
+Animations
+*****************/
+
+@keyframes slidefade {
+  100% {
+    opacity: 1;
+    margin: 0;
+  }
+}
+
+@keyframes slidefade-out {
+  100% {
+    opacity: 0;
+    margin:0;
+  }
+}
