@@ -35,51 +35,6 @@ function revealNav() {
   mainHeader.classList.remove('close');
 }
 
-// window.onscroll = function (event) {
-//   hasScrolled = true;
-//   console.log('you have scrolled');
-// };
-
-// setInterval(function () {
-//   if (hasScrolled) {
-//     changeNav();
-//     hasScrolled = false;
-//   }
-// }, 1000);
-
-// function changeNav() {
-
-// };
-
-// window.onscroll = function (event) {
-//   hasScrolled = true;
-//   if (hasScrolled === true) {
-//     mainHeader.classList.toggle('.main-header');
-//     console.log('you just scrolled');
-//     hasScrolled = false;
-//   };
-// };
-
-// let scrollAction = setTimeout(function () {
-//   if (hasScrolled === true) {
-//     mainHeader.classList.add('close');
-//     console.log('you scrolled homie!');
-//     hasScrolled = false;
-//     window.clearTimeout(hasScrolled);
-//   }
-// }, 1000);
-// let navBar = setTimeout(function () {
-//   mainHeader.classList.toggle('close');
-// }, 1000);
-
-// window.addEventListener('scroll', function (e) {
-//   window.clearTimeout(hasScrolled);
-//   hasScrolled = setTimeout(function () {
-//     mainHeader.classList.toggle('close');
-//     console.log('yo, you scrolled son!');
-//   }, 1000);
-// }, false);
-
 function smoothScroll(event) {
   event.preventDefault();
   const section = this.getAttribute('href');
