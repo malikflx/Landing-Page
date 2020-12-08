@@ -52,7 +52,7 @@ Header
 .main-nav {
   width: 50%;
 }
-.nav-items {
+#nav-items {
   display: flex;
   justify-content: space-between;
 }
@@ -104,8 +104,18 @@ Icon Styles
   font-size: 3em;
 }
 
+/* .scrollToTopBtn {
+  display: none;
+  height: 35px;
+  width: 35px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 100;
+} */
+
 .scroll-to-top {
-  display: flex;
+  display: none;
   width: 100%;
   flex-direction: column;
   align-items: center;
@@ -121,6 +131,12 @@ About
   display: flex;
   justify-content: space-evenly;
   margin: 9em 6em 6em 6em;
+}
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-image {
@@ -141,6 +157,12 @@ Services
   margin: 6em;
 }
 
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .services-content {
   width: 50%;
 }
@@ -155,10 +177,16 @@ Services
 Contact
 *****************/
 
-#contact {
-  scroll-margin-top: 15em;
+.contact {
+  display: flex;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-contact {
@@ -236,19 +264,12 @@ Footer
 /****************
 Grouped Styles
 *****************/
-
-#home,
-#about,
-#services {
-  scroll-margin-top: 20em;
-}
-
 .landing,
 .about,
 .services,
 .contact {
   height: 100vh;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .about-blurb,
@@ -262,6 +283,20 @@ Grouped Styles
 .contact-title {
   font-size: 3rem;
   font-weight: 900;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.reveal {
+  display: flex;
+  position: fixed;
+  bottom: 5em;
+  left: 40em;
+  z-index: 100;
+  opacity: 0;
+  animation: 1s slidefade 0.25s forwards;
 }
 
 /****************
