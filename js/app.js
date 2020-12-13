@@ -81,7 +81,7 @@ const addActiveState = (conditional, section) => {
 const isActive = () => {
   sections.forEach(section => {
     const elementOffset = positionOffset(section);
-    inViewport = () => elementOffset < 250 && elementOffset >= -250;
+    inViewport = () => elementOffset < 350 && elementOffset >= -350;
     removeActiveState(section);
     addActiveState(inViewport(), section);
   });
