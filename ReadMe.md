@@ -2,6 +2,8 @@
 
 # Landing Page Project
 
+This is a basic project used to demonstrate knowledge of DOM Manipulation.
+
 * [Requirements] (#requirements)
 
 ## Requirements

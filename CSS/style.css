@@ -13,13 +13,22 @@ CSS Reset
 
 a:visited {
   text-decoration: none;
-  color: black;
+  color: white;
 }
+
+/****************
+Root Styles
+*****************/
 
 html {
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
+body {
+  color: #fff;
+  background: #1b262c;
+}
 /****************
 Container Styles
 *****************/
@@ -34,13 +43,15 @@ Header
 *****************/
 
 .main-header {
+  color: #1b262c;
   display: flex;
   justify-content: space-evenly;
   padding: 2em;
   position: fixed;
   width: 100%;
-  border-bottom: 1px solid black;
-  background: white;
+  /* border-bottom: 1px solid black; */
+  background: #3282b8;
+  box-shadow: 5px 10px 18px #bbe1fa;
   animation: 1s slidefade 0.25s forwards;
   opacity: 0;
 }
@@ -104,15 +115,11 @@ Icon Styles
   font-size: 3em;
 }
 
-/* .scrollToTopBtn {
-  display: none;
-  height: 35px;
-  width: 35px;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 100;
-} */
+.fa-chevron-up {
+  font-size: 2em;
+  margin-right: 2em;
+  cursor: pointer;
+}
 
 .scroll-to-top {
   display: none;
@@ -121,6 +128,10 @@ Icon Styles
   align-items: center;
   justify-content: center;
   /* margin: 2em; */
+}
+
+.scroll-to-top a {
+  color: #3282b8;
 }
 
 /****************
@@ -285,8 +296,15 @@ Grouped Styles
   font-weight: 900;
 }
 
+.collapse-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .active {
-  text-decoration: underline;
+  /* color: #e43a19; */
+  animation: 1s colorChange 0.25s forwards;
 }
 
 .reveal {
@@ -299,9 +317,19 @@ Grouped Styles
   animation: 1s slidefade 0.25s forwards;
 }
 
+.collapse {
+  display: none;
+}
+
 /****************
 Animations
 *****************/
+
+@keyframes colorChange {
+  100% {
+    color: #3282b8;
+  }
+}
 
 @keyframes slidefade {
   100% {

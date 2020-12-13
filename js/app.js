@@ -1,7 +1,7 @@
 /* Global Variables */
 const navigation = document.getElementById('nav-items');
+const container = document.querySelector('.container');
 const sections = document.querySelectorAll('section');
-
 const rootElement = document.documentElement;
 const navlinks = document.querySelectorAll('.nav-link');
 const mainHeader = document.querySelector('.main-header');
@@ -11,6 +11,7 @@ let contact = document.querySelector('#contact');
 const pageSection = document.querySelectorAll('.page-section');
 const scrollUp = document.querySelector('.scroll-to-top');
 let hasScrolled;
+
 
 // Dynamically Builds Navigation
 const createNav = () => {
@@ -28,28 +29,14 @@ const createNav = () => {
 
 createNav();
 
-let inViewport = function (el) {
-  let bounding = el.getBoundingClientRect();
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
-
-window.addEventListener('scroll', function (event) {
-  let mainNav = document.querySelector('.main-nav')
-}, false);
-
 /* Smooth Scroll Function
   - This function scrolls to section of the Landing Page respective to the clicked navbar link 
 */
 function smoothScroll(event) {
   event.preventDefault();
-  const section = this.getAttribute('href');
+  const link = this.getAttribute('href');
 
-  document.querySelector(section).scrollIntoView({
+  document.querySelector(link).scrollIntoView({
     behavior: 'smooth'
   }, false);
 }
@@ -73,32 +60,34 @@ function handleScroll() {
 
 document.addEventListener('scroll', handleScroll)
 
-/* checkView function.
+/* Viewport Functions
 - This function checks to see that an element is in the viewport
  */
-function checkView() {
-  let inView = function (el) {
-    let bounding = el.getBoundingClientRect();
-    return (
-      bounding.top <= 0 &&
-      // bounding.left >= 0 &&
-      bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
+// retrieving the largest value <= number
+const positionOffset = (section) => {
+  // Returns size and position relative to element
+  return Math.floor(section.getBoundingClientRect().top);
+};
+// remove active class
+const removeActiveState = (section) => {
+  section.classList.remove('active');
+};
+// add active class
+const addActiveState = (conditional, section) => {
+  if (conditional) {
+    section.classList.add('active');
   };
-
-  window.addEventListener('scroll', function (event) {
-    for (let i = 0; i < navlinks.length; i++) {
-      if (inView(about)) {
-        navlinks[i].classList.add('active');
-      } else {
-        navlinks[i].classList.remove('active');
-      }
-    }
-  }, false);
+};
+const isActive = () => {
+  sections.forEach(section => {
+    const elementOffset = positionOffset(section);
+    inViewport = () => elementOffset < 250 && elementOffset >= -250;
+    removeActiveState(section);
+    addActiveState(inViewport(), section);
+  });
 };
 
-// checkView();
+window.addEventListener('scroll', isActive);
 
 // The following set of functions reveal and remove the nav respective to scrolling action
 window.addEventListener('scroll', function (event) {
@@ -123,15 +112,30 @@ function revealNav() {
   mainHeader.classList.remove('close');
 }
 
-function isActive(event) {
-  this.classList.add('active');
-}
-
 console.log('viewport width = ' + window.innerWidth);
 console.log('viewport height = ' + window.innerHeight);
 
-// for (i = 0; i < navlinks.length; i++) {
-//   navlinks[i].classList.add('active');
-// }
+/* Collapse
+ - This adds functionality to collapse and un-collapse sections.
+ */
+
+// function collapseSection() {
+
+// };
+
+// container.addEventListener('click', event => {
+//   const upArrow = event.target;
+//   const textContent = document.querySelectorAll('.text-content');
+//   if (upArrow.classList.contains('fa-chevron-up')) {
+//     for (let content of textContent) {
+
+//       console.log(content);
+//     }
+//   }
+// });
 
 
+
+// function toggleArrow(upArrow) {
+//   upArrow.classList.toggle('collapse');
+// };

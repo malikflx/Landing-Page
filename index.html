@@ -26,8 +26,11 @@
     <main>
       <section id="section1" data-nav="Home" class="landing active">
         <div class="main-landing">
-          <h1 class="main-landing-title">Landing Page</h1>
-          <h3 class="main-landing-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+          <div class="collapse-container">
+            <h1 class="main-landing-title">Landing Page</h1>
+            <i class="fas fa-chevron-up"></i>
+          </div>
+          <h3 class="main-landing-subtitle text-content">Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
         </div>
       </section>
       <section id="section2" data-nav="About" class="about">
@@ -36,8 +39,12 @@
             <i class="fas fa-laptop-code"></i>
           </div>
           <div class="about-content">
-            <h1 class="about-title">About</h1>
-            <p class="about-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt
+            <div class="collapse-container">
+              <h1 class="about-title">About</h1>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <p class="about-blurb text-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis
+              inventore sunt
               excepturi
               explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur
               ducimus,
@@ -56,7 +63,10 @@
       <section id="section3" data-nav="Services" class="services page-section">
         <div class="services-container">
           <div class="services-content">
-            <h1 class="services-title">Services</h1>
+            <div class="collapse-container">
+              <h1 class="services-title">Services</h1>
+              <i class="fas fa-chevron-up"></i>
+            </div>
             <p class="services-blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis inventore sunt
               excepturi
               explicabo quis delectus id nam, eius repudiandae. Dolores cum rerum ut maiores officia quos ex tenetur
@@ -104,12 +114,12 @@
               </form>
             </div>
           </div>
+          <i class="fas fa-chevron-up"></i>
         </div>
       </section>
       <div class="scroll-to-top">
-        <!-- <button class="scrollToTopBtn">^</button> -->
-        <a class="nav-link" href=#home><i class="fas fa-arrow-up"></i></a>
-        <a class="nav-link" href="#home">Scroll to top</a>
+        <a class="nav-link" href=#section1><i class="fas fa-arrow-up"></i></a>
+        <a class="nav-link" href="#section1">Scroll to top</a>
       </div>
     </main>
     <footer class="footer">
